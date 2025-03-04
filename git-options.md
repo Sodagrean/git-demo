@@ -28,9 +28,9 @@ git config --list --show-origin
   - remote.git-demo.fetch=+refs/heads/*:refs/remotes/git-demo/* - 定義 Git 從遠程拉取（fetch）哪些分支，`+refs/heads/*:refs/remotes/git-demo/*` 表示將遠程 git-demo 的所有分支同步到本地 refs/remotes/git-demo/ 下
   - branch.main.remote=git-demo - 本地 main 分支 關聯到遠程 git-demo 倉庫的 main 分支
   - branch.main.merge=refs/heads/main - 當你運行 git pull，Git 會從 git-demo/main 獲取更新併合併到本地 main
-  - branch.main.vscode-merge-base=git-demo/main - VS Code 相关的 Git 配置，用于记录 git-demo/main 的合并基准（merge base），帮助 VS Code 进行 Git 操作
+  - branch.main.vscode-merge-base=git-demo/main - VS Code 相關的 Git 配置，用於記錄 git-demo/main 的合併基準（merge base），幫助 VS Code 進行 Git 操作
 
 
 
-
-
+`git config --global core.autocrlf true`
+當設置為 true 時，Git 會在 提交（commit）時將 Windows 風格的 CRLF（\r\n）轉換為 Unix 風格的 LF（\n），並且在 檢出（checkout）時，將 LF 轉換回 CRLF（\r\n）以適應 Windows 環境
